@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option go_package = "github.com/lCDSLl-Richard/go-grpc-http/protogen/golang/orders";
+
+import "product/product.proto";
+import "google/api/date.proto";
+
+message Order {
+  uint64 order_id = 1;
+  uint64 customer_id = 2;
+  bool is_active = 3;
+  repeated Product products = 4;
+  google.type.Date order_date = 5;
+}

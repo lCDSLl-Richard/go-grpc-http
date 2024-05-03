@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option go_package = "github.com/lCDSLl-Richard/go-grpc-http/protogen/golang/products";
+
+enum ProductType {
+  UNKOWN = 0;
+  FOOD = 1;
+  DRINK = 2;
+}
+
+message Product {
+  uint64 product_id = 1;
+  string product_name = 2;
+  ProductType product_type = 3;
+}
